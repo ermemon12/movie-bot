@@ -6,45 +6,36 @@
   <title>MovieBot</title>
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
   <style>
+    /* Base chatbot styling */
     df-messenger {
       --df-messenger-bot-message: #e1f0ff;
       --df-messenger-user-message: #d1ffd6;
       --df-messenger-font-color: #000;
       --df-messenger-chat-background-color: #f9f9f9;
       --df-messenger-send-icon: #007bff;
+      width: 400px;
+      height: 500px;
       position: fixed;
-      bottom: 0;
-      right: 0; /* default */
-      width: 400px;   /* control chatbot width */
-      height: 500px;  /* control chatbot height */
-    }
-
-    /* If you want it centered instead of right */
-    .center-bot {
+      bottom: 20px; /* distance from bottom */
       left: 50%;
-      bottom: 0;
       transform: translateX(-50%);
-      right: auto !important;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      z-index: 1000;
     }
 
-    /* If you want it on left side */
-    .left-bot {
-      left: 20px;
-      bottom: 0;
-      right: auto !important;
+    /* Optional: smaller floating button removed since we center */
+    df-messenger::part(chat-icon) {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <!-- Default position -->
-  <!-- <df-messenger intent="WELCOME" chat-title="MovieBot"
-       agent-id="50476758-4eb3-4f06-b5f4-f8830a1287d7"
-       language-code="en"></df-messenger> -->
-
-  <!-- Example: Centered bot -->
-  <df-messenger class="center-bot"
+  <df-messenger
        intent="WELCOME" chat-title="MovieBot"
        agent-id="50476758-4eb3-4f06-b5f4-f8830a1287d7"
-       language-code="en"></df-messenger>
+       language-code="en">
+  </df-messenger>
 </body>
 </html>
