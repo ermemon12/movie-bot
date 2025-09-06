@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movie Bot</title>
-  </head>
-  <body>
-    <h2 style="text-align:center; font-family:Arial, sans-serif; margin-top:20px;">
-      Welcome to Movie Bot 🎬
-    </h2>
-    <p style="text-align:center; font-family:Arial, sans-serif;">
-      This chatbot was created using Dialogflow as part of an academic AI/DS lab experiment.
-    </p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieBot</title>
 
-    <!-- Dialogflow Messenger -->
-    <df-messenger
-      intent="WELCOME"
-      chat-title="MovieBot"
-      agent-id="50476758-4eb3-4f06-b5f4-f8830a1287d7"
-      language-code="en"
-    ></df-messenger>
+  <style>
+    /* 🎨 Custom styles for df-messenger */
+    df-messenger {
+      --df-messenger-bot-message: #e0f7fa;      /* bot msg background */
+      --df-messenger-user-message: #bbdefb;     /* user msg background */
+      --df-messenger-button-titlebar-color: #1976d2; /* title bar */
+      --df-messenger-send-icon: #1976d2;        /* send button color */
+      --df-messenger-font-color: #000000;       /* font color */
+      --df-messenger-chat-background-color: #f5f5f5; /* chat window bg */
+    }
+  </style>
+</head>
+<body>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-  </body>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="🎬 MovieBot"
+    agent-id="50476758-4eb3-4f06-b5f4-f8830a1287d7"
+    language-code="en"
+  ></df-messenger>
+</body>
 </html>
