@@ -6,26 +6,30 @@
   <title>MovieBot</title>
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
   <style>
-    /* Base chatbot styling */
+    /* Centered chatbot styling */
     df-messenger {
       --df-messenger-bot-message: #e1f0ff;
       --df-messenger-user-message: #d1ffd6;
       --df-messenger-font-color: #000;
       --df-messenger-chat-background-color: #f9f9f9;
       --df-messenger-send-icon: #007bff;
+
       width: 400px;
       height: 500px;
+
+      /* Centering horizontally and vertically */
       position: fixed;
-      bottom: 20px; /* distance from bottom */
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      border-radius: 12px;
+      transform: translate(-50%, -50%);
+
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      border-radius: 16px;
       overflow: hidden;
       z-index: 1000;
     }
 
-    /* Optional: smaller floating button removed since we center */
+    /* Remove floating chat icon */
     df-messenger::part(chat-icon) {
       display: none;
     }
