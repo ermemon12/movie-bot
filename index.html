@@ -1,7 +1,26 @@
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  intent="WELCOME"
-  chat-title="MovieBot"
-  agent-id="50476758-4eb3-4f06-b5f4-f8830a1287d7"
-  language-code="en"
-></df-messenger>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Bot</title>
+  </head>
+  <body>
+    <h2 style="text-align:center; font-family:Arial, sans-serif; margin-top:20px;">
+      Welcome to Movie Bot 🎬
+    </h2>
+    <p style="text-align:center; font-family:Arial, sans-serif;">
+      This chatbot was created using Dialogflow as part of an academic AI/DS lab experiment.
+    </p>
+
+    <!-- Dialogflow Messenger -->
+    <df-messenger
+      intent="WELCOME"
+      chat-title="MovieBot"
+      agent-id="50476758-4eb3-4f06-b5f4-f8830a1287d7"
+      language-code="en"
+    ></df-messenger>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  </body>
+</html>
