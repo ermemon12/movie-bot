@@ -4,27 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MovieBot</title>
-
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
   <style>
-    /* 🎨 Custom styles for df-messenger */
     df-messenger {
-      --df-messenger-bot-message: #e0f7fa;      /* bot msg background */
-      --df-messenger-user-message: #bbdefb;     /* user msg background */
-      --df-messenger-button-titlebar-color: #1976d2; /* title bar */
-      --df-messenger-send-icon: #1976d2;        /* send button color */
-      --df-messenger-font-color: #000000;       /* font color */
-      --df-messenger-chat-background-color: #f5f5f5; /* chat window bg */
+      --df-messenger-bot-message: #e1f0ff;
+      --df-messenger-user-message: #d1ffd6;
+      --df-messenger-font-color: #000;
+      --df-messenger-chat-background-color: #f9f9f9;
+      --df-messenger-send-icon: #007bff;
+      position: fixed;
+      bottom: 0;
+      right: 0; /* default */
+      width: 400px;   /* control chatbot width */
+      height: 500px;  /* control chatbot height */
+    }
+
+    /* If you want it centered instead of right */
+    .center-bot {
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      right: auto !important;
+    }
+
+    /* If you want it on left side */
+    .left-bot {
+      left: 20px;
+      bottom: 0;
+      right: auto !important;
     }
   </style>
 </head>
 <body>
-  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <!-- Default position -->
+  <!-- <df-messenger intent="WELCOME" chat-title="MovieBot"
+       agent-id="50476758-4eb3-4f06-b5f4-f8830a1287d7"
+       language-code="en"></df-messenger> -->
 
-  <df-messenger
-    intent="WELCOME"
-    chat-title="🎬 MovieBot"
-    agent-id="50476758-4eb3-4f06-b5f4-f8830a1287d7"
-    language-code="en"
-  ></df-messenger>
+  <!-- Example: Centered bot -->
+  <df-messenger class="center-bot"
+       intent="WELCOME" chat-title="MovieBot"
+       agent-id="50476758-4eb3-4f06-b5f4-f8830a1287d7"
+       language-code="en"></df-messenger>
 </body>
 </html>
